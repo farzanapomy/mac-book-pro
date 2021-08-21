@@ -1,10 +1,25 @@
+ 
+
+
+
+
+
+
 document.getElementById('memory-low').addEventListener('click', function () {
     const memorycharge = document.getElementById('extraMemory-price');
     const memorychargeText = parseFloat(memorycharge.innerText);
-    memorycharge.innerText = '0';
+    memorycharge.innerText = '0'; 
 
-})
+    const totalCharge = document.getElementById('total-charge');
+    const totalChargeText = totalCharge.innerText;
+    totalCharge.innerText = '1299';
 
+    const totalPrice = document.getElementById('total-price');
+    const totalPriceText = totalPrice.innerText;
+    totalPrice.innerText = '1299';
+
+}) 
+ 
 document.getElementById('memory-high').addEventListener('click', function () {
     const memorycharge = document.getElementById('extraMemory-price');
     const memorychargeText = memorycharge.innerText;
@@ -20,6 +35,7 @@ document.getElementById('memory-high').addEventListener('click', function () {
     const totalPriceText = totalPrice.innerText;
     let totalPriceNumber = parseFloat(totalPrice.innerText)
     totalPrice.innerText = memorychargenumber + totalChargeNumber;
+   
 })
 
 // storage price 
@@ -113,6 +129,16 @@ document.getElementById('cost-delivery').addEventListener('click', function () {
 
 
 
+function promoPrice(promo) {
+    if(promo=='stevekaku'){
+        const discount = totalPrice-(totalPrice/20);
+    }
+    return discount;
+}
+
+document.getElementById('promo-value').addEventListener('click',function() {
+     promoPrice();   
+})
 
 
 
