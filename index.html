@@ -37,8 +37,8 @@
                     <div class="mt-5">
                         <h3>Memory</h3>
                         <div>
-                            <button class="border-1 rounded ">8GB Unifide Memory</button>
-                            <button class="border-1 rounded ">16GB Unifide Memory</button>
+                            <button id="memory-low" class="border-1 rounded ">8GB Unifide Memory</button>
+                            <button id="memory-high" class="border-1 rounded ">16GB Unifide Memory</button>
                         </div>
                     </div>
 
@@ -47,9 +47,9 @@
                     <div class="mt-5">
                         <h3>Storage</h3>
                         <div>
-                            <button class="border-1 rounded ">256GB SSD Storage</button>
-                            <button class="border-1 rounded ">512GB SSD Storage</button>
-                            <button class="border-1 rounded ">1TB SSD Storage</button>
+                            <button id="low-storage" class="border-1 rounded ">256GB SSD Storage</button>
+                            <button id="medium-storage" class="border-1 rounded ">512GB SSD Storage</button>
+                            <button id="high-storage" class="border-1 rounded ">1TB SSD Storage</button>
                         </div>
                     </div>
 
@@ -57,59 +57,86 @@
                     <div class="mt-5">
                         <h3>Choose Your Delivery Option</h3>
                         <div>
-                            <button class="border-1 rounded ">Friday 25Aug FREE Prime Delivery</button>
-                            <button class="border-1 rounded ">Friday 21Aug Delivery charge $20</button>
+                            <button id="free-delivery" class="border-1 rounded ">Friday 25Aug FREE Prime Delivery</button>
+                            <button id="cost-delivery" class="border-1 rounded ">Friday 21Aug Delivery charge $20</button>
                         </div>
                     </div>
 
                     <!-- price calculation  -->
+                    <table class="table table-dark mt-5">
 
-                    <div class="mt-5">
-                        <div>Best Price
-                            <span class="ms-5">$1299</span>
-                            <hr>
-                        </div>
-                        <div>Extra Memory Cost
-                            <span class="ms-5">$0</span>
-                            <hr>
-                        </div>
-                        <div>Extra Storage Cost
-                            <span class="ms-5">$1299</span>
-                            <hr>
-                        </div>
-                        <div>Delivery Charge
-                            <span class="ms-5">$0</span>
-                            <p class="bold my-3">
-                            </p>
-                        </div>
-                        <div>
-                            Total Price <span class="ms-5">$1299</span>
-                        </div>
+                        <tbody>
+                            <tr>
+                                <td class="table-active">
+                                    Best Price
+                                </td>
+                                <td>
+                                    <p class="d-inline ms-5">$<span id="memory-low">1299</span></p>
+                                </td>
+                            </tr>
 
-                        <!-- Promo add  -->
+                            <tr>
+                                <td class="table-active">
+                                    Extra Memory Cost
+                                </td>
+                                <td>
+                                    <p class="d-inline ms-5">$<span id="extraMemory-price">0</span></p>
+                                </td>
+                            </tr>
 
-                        <div class="my-5">
-                            <div>Add Promo Code </div>
-                            <div class="mt-3">
-                                <input type="text" placeholder="Enter promo">
-                                <div class="ms-2 btn btn-danger">Apply</div>
-                            </div>
-                        </div>
 
-                        <div>
-                            <h2>Total : $1299</h2>
+                            <tr>
+                                <td class="table-active">
+                                    Extra Storage Cost
+                                </td>
+                                <td>
+                                    <p class="d-inline ms-5">$<span id="extraStorage-price">0</span></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-active">
+                                    Delivery Charge
+
+                                </td>
+                                <td>
+                                    <p class="d-inline ms-5">$<span id="delivery-charge">0</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-active">
+                                    Total
+                                </td>
+                                <td>
+                                    <p class="d-inline ms-5">$<span id="total-charge">1299</span></p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+
+                    <!-- Promo add  -->
+
+                    <div class="my-5">
+                        <div>Add Promo Code </div>
+                        <div class="mt-3">
+                            <input id="promo-text" type="text" placeholder="Enter promo">
+                            <div id="promo-value" class="ms-2 btn btn-danger">Apply</div>
                         </div>
+                    </div>
+
+
+                    <div>
+                        <h2>Total :$ <span id="total-price">1299</span> </h2>
                     </div>
                 </div>
 
-
-
             </div>
-
+            </div>
         </section>
 
     </main>
-
 
 
 
