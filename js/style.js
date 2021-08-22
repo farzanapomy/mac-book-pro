@@ -8,13 +8,10 @@ const discount = document.getElementById('discount-price');
 
 document.getElementById('low-memory').addEventListener('click', function () {
     memoryPrice.innerText = '0';
-
-
     updatePrice()
 })
 document.getElementById('high-memory').addEventListener('click', function () {
     memoryPrice.innerText = '180';
-
     updatePrice()
 })
 
@@ -22,29 +19,24 @@ document.getElementById('high-memory').addEventListener('click', function () {
 
 document.getElementById('low-storage').addEventListener('click', function () {
     storagePrice.innerText = '0';
-
     updatePrice()
 })
 document.getElementById('medium-storage').addEventListener('click', function () {
     storagePrice.innerText = '100';
-
     updatePrice()
 })
 document.getElementById('high-storage').addEventListener('click', function () {
     storagePrice.innerText = '180';
-
     updatePrice()
 })
 
 // delivary Charge
 document.getElementById('free-delivery').addEventListener('click', function () {
     delivaryPrice.innerText = '0';
-
     updatePrice()
 })
 document.getElementById('cost-delivery').addEventListener('click', function () {
     delivaryPrice.innerText = '20';
-
     updatePrice()
 })
 
@@ -64,9 +56,7 @@ function updatePrice() {
 // bonus part 
 // promo price 
 const promo = document.getElementById('promo-text');
-
-document.getElementById('promo-apply').addEventListener('click', function () {
-    
+document.getElementById('promo-apply').addEventListener('click', function () {  
     promoPrice()
     promo.value = '';
 })
@@ -81,14 +71,6 @@ function promoPrice() {
     }
 }
    
-
-
-
-
-
-// after  discount price 
-// discount.innerText = total;
-
 
 
 
